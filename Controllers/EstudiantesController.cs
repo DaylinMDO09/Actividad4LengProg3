@@ -1,12 +1,12 @@
 ﻿using Actividad4LengProg3.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 namespace Actividad4LengProg3.Controllers
 {
     public class EstudiantesController : Controller
     {
         private static List<EstudianteViewModel> estudiantes = new List<EstudianteViewModel>();
 
-        
         public IActionResult Index()
         {
             return View(new EstudianteViewModel());
