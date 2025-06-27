@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Actividad4LengProg3.Data;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,7 @@ app.MapControllerRoute(
 
 app.Run();
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BDDAYLIN")));
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
 
 

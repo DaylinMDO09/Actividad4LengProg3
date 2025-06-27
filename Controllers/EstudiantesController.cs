@@ -1,6 +1,10 @@
-﻿using Actividad4LengProg3.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Actividad4LengProg3.Models;
+using Actividad4LengProg3.Data;
 using Microsoft.AspNetCore.Mvc;
 using System;
+
+
 namespace Actividad4LengProg3.Controllers
 {
     public class EstudiantesController : Controller
