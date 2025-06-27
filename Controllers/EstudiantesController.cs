@@ -5,19 +5,25 @@ namespace Actividad4LengProg3.Controllers
 {
     public class EstudiantesController : Controller
     {
-        private static List<EstudianteViewModel> estudiantes = new List<EstudianteViewModel>();
+        private readonly AppDbContext _context;
+
+        public EstudiantesController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult Index()
         {
-            return View(new EstudianteViewModel());
+            return View();
         }
 
         [HttpPost]
-        public IActionResult Registrar(EstudianteViewModel model) 
+        public IActionResult Registrar(EstudianteViewModel model)
         {
             if (ModelState.IsValid)
             {
-                estudiantes.Add(model);
+                _context.ESTUDIANTES.Add(model);
+                _context.SaveChanges();
                 TempData["Mensaje"] = "Estudiante registrado correctamente.";
             }
 
@@ -29,7 +35,7 @@ namespace Actividad4LengProg3.Controllers
         {
             if (ModelState.IsValid)
             {
-                EstudianteViewModel estudianteActual = estudiantes.FirstOrDefault(e => e.matriculaEstudiante.Equals(model.matriculaEstudiante));
+                EstudianteViewModel estudianteActual = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante.Equals(model.matriculaEstudiante));
 
                 if (estudianteActual == null)
                 {
@@ -52,46 +58,50 @@ namespace Actividad4LengProg3.Controllers
                     estudianteActual.becaEstudiante = model.becaEstudiante;
                     estudianteActual.porcentajebecaEstudiante = model.porcentajebecaEstudiante;
 
+                    _context.SaveChanges();
                     TempData["Mensaje"] = "Los datos del estudiante han sido editados satisfactoriamente.";
                     return RedirectToAction("Lista");
                 }
             }
 
-           return View(model); 
+            return View(model);
         }
 
-        public IActionResult Eliminar (string matricula) 
+        public IActionResult Eliminar(string matricula)
         {
-            var estudiante = estudiantes.FirstOrDefault(e => e.matriculaEstudiante == matricula);
-            if (estudiante != null) estudiantes.Remove(estudiante);
-            TempData["Mensaje"] = "Estudiante eliminado satisfactoriamente.";
+            var estudiante = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante == matricula);
+            if (estudiante == null)
+            {
+                _context.ESTUDIANTES.Remove(estudiante);
+                _context.SaveChanges();
+            }
+
             return RedirectToAction("Lista");
         }
 
-        [HttpGet]
-        public IActionResult Lista()
-        {
-            return View(estudiantes);
-        }
-
-        [HttpGet]
-        public IActionResult Editar(string matricula) 
-        {
-            if (string.IsNullOrEmpty(matricula))
+            [HttpGet]
+            public IActionResult Lista()
             {
-                TempData["MensajeError"] = "La matricula de este estudiante no existe.";
-                return RedirectToAction("Lista");
+                var estudiantes = _context.ESTUDIANTES.ToList();
+                return View(estudiantes);
             }
 
-            EstudianteViewModel estudianteActual = estudiantes.FirstOrDefault(e => e.matriculaEstudiante.Equals(matricula));
-
-            if (estudianteActual == null)
+            [HttpGet]
+            public IActionResult Editar(string matricula)
             {
-                TempData["MensajeError"] = "El estudiante indicado no existe.";
-                return RedirectToAction("Lista");
-            }
+                if (string.IsNullOrEmpty(matricula))
+                {
+                    TempData["MensajeError"] = "La matricula es invalida";
+                    return RedirectToAction("Lista");
+                }
+                var estudiante = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante == matricula);
+                if (estudiante == null)
+                {
+                    TempData["MensajeError"] = "El estudiante no fue encontrado";
+                    return RedirectToAction("Lista");
+                }
 
-            return View(estudianteActual);
+                return View(estudiante);
+            }
         }
     }
-}

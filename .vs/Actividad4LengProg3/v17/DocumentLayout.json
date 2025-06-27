@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\views\\estudiantes\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:views\\estudiantes\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:controllers\\materiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A36A5D5-3457-4311-AA61-54D90B4D07AB}|Actividad4LengProg3.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,64 +26,59 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-21T01:58:38.198Z",
+              "DocumentIndex": 0,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Estudiantes\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Estudiantes\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T02:24:45.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "EstudianteViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\EstudianteViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\EstudianteViewModel.cs",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\EstudianteViewModel.cs",
+              "RelativeToolTip": "Models\\EstudianteViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T02:08:56.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EstudiantesController.cs",
               "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\EstudiantesController.cs",
               "RelativeDocumentMoniker": "Controllers\\EstudiantesController.cs",
               "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\EstudiantesController.cs",
               "RelativeToolTip": "Controllers\\EstudiantesController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAowEoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T01:56:03.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MateriasController.cs",
-              "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\MateriasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MateriasController.cs",
-              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\MateriasController.cs",
-              "RelativeToolTip": "Controllers\\MateriasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T01:54:52.118Z",
+              "WhenOpened": "2025-06-27T01:18:28.818Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 55,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
