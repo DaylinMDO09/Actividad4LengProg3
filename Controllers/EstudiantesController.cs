@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Actividad4LengProg3.Models;
-using Actividad4LengProg3.Data;
+﻿using Actividad4LengProg3.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Microsoft.EntityFrameworkCore;
+using Actividad4LengProg3.Data;
+
 
 
 namespace Actividad4LengProg3.Controllers
