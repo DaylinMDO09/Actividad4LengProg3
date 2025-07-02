@@ -45,7 +45,7 @@ namespace Actividad4LengProg3.Controllers
             efvm.turnos = new SelectList(new[] { "MATUTINO", "VESPERTINO", "NOCTURNO" }, efvm.Estudiante.Turno);
             efvm.ingresos = new SelectList(new[] { "NUEVO", "REINGRESO", "TRANSFERENCIA", "DOCTORADO O MAESTRÍA" }, efvm.Estudiante.Tipoingreso);
 
-            return View("Registrar", efvm);
+            return View("Index", efvm);
         }
 
 

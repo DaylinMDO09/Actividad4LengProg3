@@ -1,4 +1,4 @@
-﻿@model List<EstudianteViewModel>
+﻿@model List<Actividad4LengProg3.Models.ViewModels.EstudianteFormViewModel>
 
 @if (TempData["MensajeError"] != null)
 {
@@ -31,21 +31,21 @@
 					foreach (var it in Model)
 					{
 						<tr>
-						<td>@it.nombreEstudiante</td>
-						<td>@it.matriculaEstudiante</td>
-						<td>@it.carreraEstudiante</td>
-						<td>@it.correoEstudiante</td>
-						<td>@it.telefonoEstudiante</td>
-						<td>@it.fechaEstudiante</td>
-						<td>@it.generoEstudiante</td>
-						<td>@it.turnoEstudiante</td>
-						<td>@it.ingresoEstudiante</td>
-						<td>@it.becaEstudiante</td>
-						<td>@it.porcentajebecaEstudiante</td>
-						<td>@it.tcEstudiante</td>
+						<td>@it.Estudiante.Nombrecompleto</td>
+						<td>@it.Estudiante.Matricula</td>
+						<td>@it.Estudiante.Carrera</td>
+						<td>@it.Estudiante.Correoinstitucional</td>
+						<td>@it.Estudiante.Telefono</td>
+						<td>@it.Estudiante.Fechanac</td>
+						<td>@it.Estudiante.Genero</td>
+						<td>@it.Estudiante.Turno</td>
+						<td>@it.Estudiante.Tipoingreso</td>
+						<td>@it.Estudiante.Estabecado</td>
+						<td>@it.Estudiante.Porcentajebeca</td>
+						<td>@it.Estudiante.Terminosycondiciones</td>
 						<td>
-						<a asp-action="Editar" asp-route-matricula="@it.matriculaEstudiante" class="btn btn-secondary">Editar</a>
-						<a asp-action="Eliminar" asp-route-matricula="@it.matriculaEstudiante" class="btn btn-danger">Eliminar</a>
+						<a asp-action="Editar" asp-route-matricula="@it.Estudiante.Matricula" class="btn btn-secondary">Editar</a>
+						<a asp-action="Eliminar" asp-route-matricula="@it.Estudiante.Matricula" class="btn btn-danger">Eliminar</a>
 						</td>
 						</tr>
 					}
