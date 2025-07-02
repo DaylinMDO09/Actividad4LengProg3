@@ -1,78 +1,73 @@
-﻿@{
-}
-
-
-@model EstudianteViewModel
+﻿@model Actividad4LengProg3.Models.ViewModels.EstudianteFormViewModel
 
 <h1>Registro de Estudiantes</h1>
 
-@if (TempData["Mensaje"] != null)
+@if (TempData != null && TempData["Mensaje"] != null)
 {
 	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
 <form asp-action="Registrar" method="post">
 	<div>
-		<label asp-for="nombreEstudiante"></label>
-		<input asp-for="nombreEstudiante" class="form-control" />
-		<span asp-validation-for="nombreEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Nombrecompleto"></label>
+		<input asp-for="Estudiante.Nombrecompleto" class="form-control" />
+		<span asp-validation-for="Estudiante.Nombrecompleto" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="matriculaEstudiante"></label>
-		<input asp-for="matriculaEstudiante" class="form-control" />
-		<span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Matricula"></label>
+		<input asp-for="Estudiante.Matricula" class="form-control" />
+		<span asp-validation-for="Estudiante.Matricula" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="carreraEstudiante"></label>
-		<select asp-for="carreraEstudiante" asp-items="Model.carreras" class="form-control"></select>
-		<span asp-validation-for="carreraEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Carrera" class="control-label"></label>
+		<select asp-for="Estudiante.Carrera" class="form-control" asp-items="Model.carreras"></select>
+		<span asp-validation-for="Estudiante.Carrera" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="correoEstudiante"></label>
-		<input asp-for="correoEstudiante" class="form-control" />
-		<span asp-validation-for="correoEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Correoinstitucional"></label>
+		<input asp-for="Estudiante.Correoinstitucional" class="form-control" />
+		<span asp-validation-for="Estudiante.Correoinstitucional" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="telefonoEstudiante"></label>
-		<input asp-for="telefonoEstudiante" class="form-control" />
-		<span asp-validation-for="telefonoEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Telefono"></label>
+		<input asp-for="Estudiante.Telefono" class="form-control" />
+		<span asp-validation-for="Estudiante.Telefono" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="fechaEstudiante"></label>
-		<input asp-for="fechaEstudiante" type="date" class="form-control" />
-		<span asp-validation-for="fechaEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Fechanac"></label>
+		<input asp-for="Estudiante.Fechanac" type="date" class="form-control" />
+		<span asp-validation-for="Estudiante.Fechanac" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="generoEstudiante"></label>
-		<input type="radio" asp-for="generoEstudiante" value="Masculino" /> Masculino
-		<input type="radio" asp-for="generoEstudiante" value="Femenino" /> Femenino
+		<label asp-for="Estudiante.Genero"></label>
+		<input type="radio" asp-for="Estudiante.Genero" value="Masculino" /> Masculino
+		<input type="radio" asp-for="Estudiante.Genero" value="Femenino" /> Femenino
 	</div>
 	<div>
-		<label asp-for="turnoEstudiante"></label>
-		<select asp-for="turnoEstudiante" asp-items="Model.turnos" class="form-control"></select>
-		<span asp-validation-for="turnoEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Turno" class="control-label"></label>
+		<select asp-for="Estudiante.Turno" class="form-control" asp-items="Model.turnos"></select>
+		<span asp-validation-for="Estudiante.Turno" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="ingresoEstudiante"></label>
-		<select asp-for="ingresoEstudiante" asp-items="Model.ingresos" class="form-control"></select>
-		<span asp-validation-for="ingresoEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Tipoingreso" class="control-label"></label>
+		<select asp-for="Estudiante.Tipoingreso" class="form-control" asp-items="Model.ingresos"></select>
+		<span asp-validation-for="Estudiante.Tipoingreso" class="text-danger"></span>
 	</div>
 	<div>
-		<label asp-for="becaEstudiante"></label>
-		<input asp-for="becaEstudiante" class="form-check-input" />
-		<span asp-validation-for="becaEstudiante"></span>
+		<label asp-for="Estudiante.Estabecado"></label>
+		<input asp-for="Estudiante.Estabecado" class="form-check-input" />
+		<span asp-validation-for="Estudiante.Estabecado"></span>
 	</div>
 	<div>
-		<label asp-for="porcentajebecaEstudiante"></label>
-		<input asp-for="porcentajebecaEstudiante" class="form-control" />
-		<span asp-validation-for="porcentajebecaEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Porcentajebeca"></label>
+		<input asp-for="Estudiante.Porcentajebeca" class="form-control" />
+		<span asp-validation-for="Estudiante.Porcentajebeca" class="text-danger"></span>
 	</div>
 	<div class="form-check">
-		<label asp-for="tcEstudiante"></label>
-		<input type="checkbox" asp-for="tcEstudiante" />
-		<span asp-validation-for="tcEstudiante" class="text-danger"></span>
+		<label asp-for="Estudiante.Terminosycondiciones"></label>
+		<input type="checkbox" asp-for="Estudiante.Terminosycondiciones" />
+		<span asp-validation-for="Estudiante.Terminosycondiciones" class="text-danger"></span>
 	</div>
-	
 	<div class="row">
 		<div class="col-6">
 		<br />

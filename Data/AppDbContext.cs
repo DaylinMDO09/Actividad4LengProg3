@@ -8,7 +8,7 @@ namespace Actividad4LengProg3.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<EstudianteViewModel> ESTUDIANTES { get; set; }
+        public DbSet<Estudiante> ESTUDIANTES { get; set; }
         //public DbSet<Materia> MATERIAS { get; set; }
         //public DbSet<Calificacion> CALIFICACIONES { get; set; }
     }

@@ -21,7 +21,6 @@ C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMAC
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\Actividad4LengProg3.dll
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\refint\Actividad4LengProg3.dll
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\Actividad4LengProg3.pdb
@@ -166,3 +165,4 @@ C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMAC
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\Activida.F06461A9.Up2Date
+C:\Users\Daylin\Desktop\Documentos Importantes\Tareas 2025\LENGUAJE DE PROGRAMACION III\Actividad4\Actividad4LengProg3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -1,8 +1,7 @@
 ﻿using Actividad4LengProg3.Models;
+using Actividad4LengProg3.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using Microsoft.EntityFrameworkCore;
-using Actividad4LengProg3.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 
@@ -10,103 +9,45 @@ namespace Actividad4LengProg3.Controllers
 {
     public class EstudiantesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly BdMdoContext _context;
 
-        public EstudiantesController(AppDbContext context)
+        public EstudiantesController(BdMdoContext context)
         {
             _context = context;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var efvm = new EstudianteFormViewModel
+            {
+                Estudiante = new Estudiante(),
+                carreras = new SelectList(new[] { "INGENIERÍA EN SOFTWARE", "ODONTOLOGIA", "ADMINISTRACIÓN DE EMPRESAS", "INGENIERÍA INDUSTRIAL", "ENFERMERÍA" }),
+                turnos = new SelectList(new[] { "MATUTINO", "VESPERTINO", "NOCTURNO" }),
+                ingresos = new SelectList(new[] { "NUEVO", "REINGRESO", "TRANSFERENCIA", "DOCTORADO O MAESTRÍA" })
+            };
+
+            return View(efvm);
         }
 
         [HttpPost]
-        public IActionResult Registrar(EstudianteViewModel model)
+        [ValidateAntiForgeryToken]
+        public IActionResult Registrar(EstudianteFormViewModel efvm)
         {
             if (ModelState.IsValid)
             {
-                _context.ESTUDIANTES.Add(model);
+                _context.Add(efvm.Estudiante);
                 _context.SaveChanges();
-                TempData["Mensaje"] = "Estudiante registrado correctamente.";
+                TempData["Mensaje"] = "¡Estudiante registrado exitosamente!";
+                return RedirectToAction(nameof(Index));
             }
 
-            return View("Index", model);
+            efvm.carreras = new SelectList(new[] { "INGENIERÍA EN SOFTWARE", "ODONTOLOGIA", "ADMINISTRACIÓN DE EMPRESAS", "INGENIERÍA INDUSTRIAL", "ENFERMERÍA" }, efvm.Estudiante.Carrera);
+            efvm.turnos = new SelectList(new[] { "MATUTINO", "VESPERTINO", "NOCTURNO" }, efvm.Estudiante.Turno);
+            efvm.ingresos = new SelectList(new[] { "NUEVO", "REINGRESO", "TRANSFERENCIA", "DOCTORADO O MAESTRÍA" }, efvm.Estudiante.Tipoingreso);
+
+            return View("Registrar", efvm);
         }
 
-        [HttpPost]
-        public IActionResult Editar(EstudianteViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                EstudianteViewModel estudianteActual = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante.Equals(model.matriculaEstudiante));
 
-                if (estudianteActual == null)
-                {
-                    TempData["MensajeError"] = "No existe el estudiante indicado.";
-
-                    return RedirectToAction("Lista");
-                }
-
-                if (estudianteActual != null)
-                {
-                    estudianteActual.matriculaEstudiante = model.matriculaEstudiante;
-                    estudianteActual.nombreEstudiante = model.nombreEstudiante;
-                    estudianteActual.carreraEstudiante = model.carreraEstudiante;
-                    estudianteActual.correoEstudiante = model.correoEstudiante;
-                    estudianteActual.telefonoEstudiante = model.telefonoEstudiante;
-                    estudianteActual.fechaEstudiante = model.fechaEstudiante;
-                    estudianteActual.generoEstudiante = model.generoEstudiante;
-                    estudianteActual.turnoEstudiante = model.turnoEstudiante.ToString();
-                    estudianteActual.ingresoEstudiante = model.ingresoEstudiante;
-                    estudianteActual.becaEstudiante = model.becaEstudiante;
-                    estudianteActual.porcentajebecaEstudiante = model.porcentajebecaEstudiante;
-
-                    _context.SaveChanges();
-                    TempData["Mensaje"] = "Los datos del estudiante han sido editados satisfactoriamente.";
-                    return RedirectToAction("Lista");
-                }
-            }
-
-            return View(model);
-        }
-
-        public IActionResult Eliminar(string matricula)
-        {
-            var estudiante = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante == matricula);
-            if (estudiante == null)
-            {
-                _context.ESTUDIANTES.Remove(estudiante);
-                _context.SaveChanges();
-            }
-
-            return RedirectToAction("Lista");
-        }
-
-            [HttpGet]
-            public IActionResult Lista()
-            {
-                var estudiantes = _context.ESTUDIANTES.ToList();
-                return View(estudiantes);
-            }
-
-            [HttpGet]
-            public IActionResult Editar(string matricula)
-            {
-                if (string.IsNullOrEmpty(matricula))
-                {
-                    TempData["MensajeError"] = "La matricula es invalida";
-                    return RedirectToAction("Lista");
-                }
-                var estudiante = _context.ESTUDIANTES.FirstOrDefault(e => e.matriculaEstudiante == matricula);
-                if (estudiante == null)
-                {
-                    TempData["MensajeError"] = "El estudiante no fue encontrado";
-                    return RedirectToAction("Lista");
-                }
-
-                return View(estudiante);
-            }
-        }
     }
+}

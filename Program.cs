@@ -1,10 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Actividad4LengProg3.Data;
-using System;
+using Actividad4LengProg3.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<BdMdoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
 
 builder.Services.AddControllersWithViews();

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
-using System.Drawing;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Actividad4LengProg3.Models
 {
     public class EstudianteViewModel
