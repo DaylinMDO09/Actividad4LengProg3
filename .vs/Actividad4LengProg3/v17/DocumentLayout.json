@@ -46,8 +46,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-06T11:39:48.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T11:39:48.906Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "Models\\EstudianteViewModel.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAIwCoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T03:42:03.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T03:42:03.87Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "Views\\Estudiantes\\Lista.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T01:43:04.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T01:43:04.932Z"
             },
             {
               "$type": "Document",
@@ -83,7 +80,7 @@
               "RelativeDocumentMoniker": "Views\\Estudiantes\\Index.cshtml",
               "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Index.cshtml",
               "RelativeToolTip": "Views\\Estudiantes\\Index.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-27T04:35:12.956Z",
               "EditorCaption": ""
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Controllers\\EstudiantesController.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAQwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T01:56:03.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T01:56:03.011Z"
             }
           ]
         },
