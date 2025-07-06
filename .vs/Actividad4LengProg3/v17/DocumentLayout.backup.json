@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|solutionrelative:models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\views\\estudiantes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|solutionrelative:views\\estudiantes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|c:\\users\\daylin\\desktop\\documentos importantes\\tareas 2025\\lenguaje de programacion iii\\actividad4\\actividad4lengprog3\\models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B825-4AB0-4DA2-A6E5-D5016B7AEB39}|Actividad4LengProg3.csproj|solutionrelative:models\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\BdMdoContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,12 +59,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EstudianteViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\EstudianteViewModel.cs",
               "RelativeDocumentMoniker": "Models\\EstudianteViewModel.cs",
-              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\EstudianteViewModel.cs*",
-              "RelativeToolTip": "Models\\EstudianteViewModel.cs*",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Models\\EstudianteViewModel.cs",
+              "RelativeToolTip": "Models\\EstudianteViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T03:42:03.87Z",
@@ -72,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Estudiantes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Index.cshtml",
-              "RelativeToolTip": "Views\\Estudiantes\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Views\\Estudiantes\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Estudiantes\\Index.cshtml*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-27T04:35:12.956Z",
               "EditorCaption": ""
