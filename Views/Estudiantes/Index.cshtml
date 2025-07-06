@@ -1,13 +1,13 @@
 ﻿@model EstudianteViewModel
 
-<h1>Registro de Estudiantes</h1>
-
 @if (TempData["Mensaje"] != null)
 {
 	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
-<form asp-action="Registrar" method="post">
+<h1>Registro de Estudiantes</h1>
+
+<form asp-action="Registrar" asp-controller="Estudiantes" method="post">
 	<div>
 		<label asp-for="nombreEstudiante"></label>
 		<input asp-for="nombreEstudiante" class="form-control" />

@@ -8,16 +8,16 @@ namespace Actividad4LengProg3.Models
         [Required(ErrorMessage = "El nombre del estudiante es necesario")]
         [StringLength(100)]
         [Display(Name = "Nombre completo")]
-        public string nombreEstudiante { get; set; }
+        public string nombreEstudiante { get; set; } = null!;
 
         [Required(ErrorMessage = "La matricula es obligatória")]
         [StringLength(20, MinimumLength = 6)]
         [Display(Name = "Matricula")]
-        public string matriculaEstudiante { get; set; }
+        public string matriculaEstudiante { get; set; } = null!;
 
         [Required(ErrorMessage = "Debes de elegir una carrera")]
         [Display(Name = "Carrera")]
-        public string carreraEstudiante { get; set; }
+        public string carreraEstudiante { get; set; } = null!;
         public List<SelectListItem> carreras { get; } = new List<SelectListItem>
         {
             new SelectListItem {Value = "Ingeniería en software", Text = "Ingeniería en software"},
@@ -30,25 +30,25 @@ namespace Actividad4LengProg3.Models
         [Required(ErrorMessage = "El correo es obligatorio")]
         [EmailAddress(ErrorMessage = "Correo inválido")]
         [Display(Name = "Correo institucional")]
-        public string correoEstudiante { get; set; }
+        public string correoEstudiante { get; set; } = null!;
 
         [Phone(ErrorMessage = "El número telefónico es obligatorio")]
         [MinLength(10)]
         [Display(Name = "Número telefónico")]
-        public string telefonoEstudiante { get; set; }
+        public string telefonoEstudiante { get; set; } = null!;
 
         [Required(ErrorMessage = "Debe indicar su fecha de nacimiento")]
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de nacimiento")]
-        public DateTime? fechaEstudiante { get; set; }
+        public DateTime fechaEstudiante { get; set; }
 
         [Required]
         [Display(Name = "Género")]
-        public string generoEstudiante { get; set; }
+        public string generoEstudiante { get; set; } = null!;
 
         [Required(ErrorMessage = "Debes elegir un turno")]
         [Display(Name = "Turnos")]
-        public string turnoEstudiante { get; set; }
+        public string turnoEstudiante { get; set; } = null!;
         public List<SelectListItem> turnos { get; } = new List<SelectListItem>
         {
             new SelectListItem {Value = "Matutino", Text = "Matutino"},
@@ -58,7 +58,7 @@ namespace Actividad4LengProg3.Models
 
         [Required(ErrorMessage = "Elige tu tipo de ingreso")]
         [Display(Name = "Tipo de ingreso")]
-        public string ingresoEstudiante { get; set; }
+        public string ingresoEstudiante { get; set; } = null!;
         public List<SelectListItem> ingresos { get; } = new List<SelectListItem>
         {
             new SelectListItem {Value = "Nuevo", Text = "Nuevo ingreso"},
