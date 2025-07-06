@@ -1,19 +1,15 @@
-using Microsoft.EntityFrameworkCore;
-using Actividad4LengProg3.Models;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<BdMdoContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
-
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configuración del middleware
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -29,6 +25,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
-
-
