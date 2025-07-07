@@ -1,81 +1,105 @@
 ﻿@model EstudianteViewModel
 
-<h1>Edición de datos del estudiante:</h1>
+<h1>Estudiantes Registrados</h1>
 
-@if (TempData["MensajeError"] != null)
+
+
+
+@if (TempData["Mensaje"] != null)
 {
-	<div class="alert alert-success">@TempData["MensajeError"]</div>
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
-<form asp-action="Editar" method="post">
-	<div>
-		<label asp-for="nombreEstudiante"></label>
-		<input asp-for="nombreEstudiante" class="form-control" />
-		<span asp-validation-for="nombreEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="matriculaEstudiante"></label>
-		<input asp-for="matriculaEstudiante" class="form-control" />
-		<span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="carreraEstudiante"></label>
-		<select asp-for="carreraEstudiante" asp-items="Model.carreras" class="form-control"></select>
-		<span asp-validation-for="carreraEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="correoEstudiante"></label>
-		<input asp-for="correoEstudiante" class="form-control" />
-		<span asp-validation-for="correoEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="telefonoEstudiante"></label>
-		<input asp-for="telefonoEstudiante" class="form-control" />
-		<span asp-validation-for="telefonoEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="fechaEstudiante"></label>
-		<input asp-for="fechaEstudiante" type="date" class="form-control" />
-		<span asp-validation-for="fechaEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="generoEstudiante"></label>
-		<input type="radio" asp-for="generoEstudiante" value="Masculino" /> Masculino
-		<input type="radio" asp-for="generoEstudiante" value="Femenino" /> Femenino
-	</div>
-	<div>
-		<label asp-for="turnoEstudiante"></label>
-		<select asp-for="turnoEstudiante" asp-items="Model.turnos" class="form-control"></select>
-		<span asp-validation-for="turnoEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="ingresoEstudiante"></label>
-		<select asp-for="ingresoEstudiante" asp-items="Model.ingresos" class="form-control"></select>
-		<span asp-validation-for="ingresoEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="becaEstudiante"></label>
-		<input type="checkbox" asp-for="becaEstudiante" />
-		<span asp-validation-for="becaEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="porcentajebecaEstudiante"></label>
-		<input asp-for="porcentajebecaEstudiante" class="form-control" />
-		<span asp-validation-for="porcentajebecaEstudiante" class="text-danger"></span>
-	</div>
-	<div>
-		<label asp-for="tcEstudiante"></label>
-		<input type="checkbox" asp-for="tcEstudiante" />
-		<span asp-validation-for="tcEstudiante"></span>
-	</div>
-	<div class="row">
-		<div class="col-6">
-			<br />
-			<button type="submit" class="btn btn-primary" size="30px">Editar</button>
-			<a href="/Estudiantes/Lista" class="btn btn-secondary">Lista de estudiantes registrados</a>
-		</div>
-	</div>
-</form>
-@section Scripts {
-	<partial name="_ValidationScriptsPartial" />
-}
+<div class="container mb-3">
+    <form class="form-control" action="/Estudiantes/Editar" method="post">
+        <input type="hidden" name="Matricula" value="@Model.Matricula" />
+
+        <div>
+            <label class="form-label">Nombre completo:</label>
+            <input class="form-control" type="text" name="NombreCompleto" value="@Model.NombreCompleto" />
+        </div>
+
+        <div>
+            <label class="form-label" asp-for="Carrera"></label>
+            <select class="form-select" asp-for="Carrera" asp-items="@(new SelectList (
+                                                                                                         new[] { "Ingeniería de Software",
+                                                                                                                 "Contabilidad",
+                                                                                                                 "Enfermería",
+                                                                                                                 "Odontología",
+                                                                                                                 "Derecho" }
+                                                                                                                  ))">
+                <option value="">-- Seleccione una carrera --</option>
+            </select>
+            <span asp-validation-for="Carrera" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label">Correo institucional:</label>
+            <input class="form-control" type="email" name="CorreoInstitucional" value="@Model.CorreoInstitucional" />
+        </div>
+
+        <div>
+            <label class="form-label">Teléfono:</label>
+            <input class="form-control" type="tel" name="Telefono" value="@Model.Telefono" />
+        </div>
+
+        <div>
+            <label class="form-label">Fecha de nacimiento:</label>
+            <input class="form-control" type="date" name="FechaNacimiento" value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div>
+            <label class="form-label">Género:</label>
+            <input type="radio" name="Genero" value="Masculino" @(Model.Genero == "Masculino" ? "checked" : "") /> Masculino
+            <input type="radio" name="Genero" value="Femenino" @(Model.Genero == "Femenino" ? "checked" : "") /> Femenino<br />
+        </div>
+
+        <div>
+            <label class="form-label" asp-for="Turno"></label>
+            <select class="form-select" asp-for="Turno" asp-items="@(new SelectList(
+                                                                                                     new[] { "Mañana",
+                                                                                                             "Tarde",
+                                                                                                             "Noche" }
+                                                                                                            ))">
+                <option value="">-- Seleccione turno --</option>
+            </select>
+            <span asp-validation-for="Turno" class="text-danger"></span>
+        </div>
+
+
+        <div>
+            <label class="form-label" asp-for="TipoIngreso">Tipo de Ingreso</label>
+            <select class="form-select" asp-for="TipoIngreso" asp-items="@(new SelectList(
+                                                                                                                 new[] { "Nuevo Ingreso",
+                                                                                                                         "Reingreso",
+                                                                                                                         "Transferencia" }
+                                                                                                                        ))">
+                <option value="">-- Seleccione tipo de ingreso --</option>
+            </select>
+            <span asp-validation-for="TipoIngreso" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label">
+                <input type="checkbox" name="EstaBecado" value="true" @(Model.EstaBecado ? "checked" : "") /> ¿Está becado?
+            </label>
+        </div>
+
+        <div>
+            <label class="form-label">Porcentaje de beca:</label><br />
+            <input class="form-control" type="number" name="PorcentajeBeca" value="@Model.PorcentajeBeca" />
+        </div>
+
+        @* <div>
+    <label class="form-label">
+        <input type="checkbox" name="TerminosYCondiciones" value="true" @(Model.TerminosYCondiciones ? "checked" : "") />
+        Acepto los términos y condiciones
+    </label>
+    </div> *@
+
+        <br /><br />
+
+        <button class="btn btn-success" type="submit">Guardar cambios</button>
+        <a class="btn btn-danger" href="/Estudiantes/Lista">Cancelar</a>
+    </form>
+</div>
