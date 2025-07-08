@@ -28,7 +28,7 @@ namespace Actividad4LengProg3.Controllers
                 _context.SaveChanges();
                 TempData["Mensaje"] = "Estudiante registrado satisfactoriamente.";
                 return RedirectToAction("Lista");
-            }
+            }   
             return View(estudiante);
         }
 
