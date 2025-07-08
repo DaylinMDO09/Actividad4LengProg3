@@ -17,6 +17,11 @@
     </div>
 
     <div>
+		<input  type ="hidden" name="matriculaEstudiante" value="@Model.matriculaEstudiante" />
+        <span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
+    </div>
+
+    <div>
         <label asp-for="carreraEstudiante"></label>
         <select asp-for="carreraEstudiante" class="form-select" asp-items="@(new SelectList (
                                                                                                                                     new[] { "Ingeniería en Software",
@@ -84,6 +89,14 @@
         <label asp-for="porcentajebecaEstudiante"></label>
         <input asp-for="porcentajebecaEstudiante" class="form-control" />
         <span asp-validation-for="porcentajebecaEstudiante" class="text-danger"></span>
+    </div>
+    <div class="form-check">
+        <input class="form-control" type="hidden" asp-for="tcEstudiante" value="true" />
+        <input class="form-check-input" type="checkbox" asp-for="tcEstudiante" value="true" />
+        <label asp-for="tcEstudiante"></label>
+        <span asp-validation-for="tcEstudiante" class="text-danger"></span>
+
+
     </div>
 
     <br />
