@@ -7,7 +7,7 @@
 	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
-<form class="form-control" asp-action="Registrar" asp-controller="Materias" method="post">
+<form asp-action="Registrar" asp-controller="Materias" method="post">
 	<div>
 		<label asp-for="codMateria"></label>
 		<input asp-for="codMateria" class="form-control" />
@@ -17,12 +17,12 @@
 	<div>
 		<label asp-for="nombreMateria"></label>
 		<input asp-for="nombreMateria" class="form-control" />
-		<span asp-validation-for="nombreMateria"></span>
+		<span asp-validation-for="nombreMateria" class="text-danger"></span>
 	</div>
 	<div>
 		<label asp-for="creditoMateria"></label>
 		<input asp-for="creditoMateria" class="form-control" />
-		<span asp-validation-for="creditoMateria"></span>
+		<span asp-validation-for="creditoMateria" class="text-danger"></span>
 	</div>
 	<div>
 		<label asp-for="carreraMateria"></label>
@@ -34,12 +34,13 @@
                                                                             	 "Psicología" }))">
 		<option value="">Elige una carrera</option>
 		</select>
+		<span asp-validation-for="carreraMateria" class="text-danger"></span>
 	</div>
 
 	<br />
 
 	<div>
-		<button class="btn btn-primary" type="submit">Registrar materia</button>
+		<button type="submit" class="btn btn-primary">Registrar materia</button>
 		<a href="/Materias/Lista" class="btn btn-secondary">Lista de materias registradas</a>
 	</div>
 

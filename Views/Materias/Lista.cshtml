@@ -1,0 +1,41 @@
+﻿@model List<Actividad4LengProg3.Models.MateriaViewModel>
+
+<h1>Listado de materias registradas</h1>
+
+@if (TempData["Mensaje"] != null)
+{
+	<div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<div class="row">
+	<div class="col-12">
+		<table class=" table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Código de la materia</th>
+					<th>Nombre de la materia</th>
+					<th>Créditos de la materia</th>
+					<th>Carrera de la materia</th>
+				</tr>
+			</thead>
+			<tbody>
+				@{
+					foreach (var it in Model)
+					{
+						<tr>
+						<td>@it.codMateria</td>
+						<td>@it.nombreMateria</td>
+						<td>@it.creditoMateria</td>
+						<td>@it.carreraMateria</td>
+						</tr>
+						<td>
+						<a asp-action="Editar" asp-route-codmateria="@it.codMateria" class="btn btn-secondary">Editar materia</a>
+						<a asp-action="Eliminar" asp-route-codmateria="@it.codMateria" class="btn btn-danger">Eliminar materia</a>
+						</td>
+					}
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>

@@ -1,0 +1,48 @@
+﻿@model MateriaViewModel;
+
+<h1>Registro de Materias</h1>
+
+@if (TempData["Mensaje"] != null)
+{
+	<div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<form class="form-control" asp-action="Editar" asp-controller="Materias" method="post">
+	<div>
+		<input type="hidden" name="codMateria" value="@Model.codMateria" />
+		<span asp-validation-for="codMateria" class="text-danger"></span>
+	</div>
+
+	<div>
+		<label asp-for="nombreMateria"></label>
+		<input asp-for="nombreMateria" class="form-control" />
+		<span asp-validation-for="nombreMateria"></span>
+	</div>
+	<div>
+		<label asp-for="creditoMateria"></label>
+		<input asp-for="creditoMateria" class="form-control" />
+		<span asp-validation-for="creditoMateria"></span>
+	</div>
+	<div>
+		<label asp-for="carreraMateria"></label>
+		<select asp-for="carreraMateria" class="form-control" asp-items="@(new SelectList (
+																		 														new[] { "Ingeniería en Software",
+                                                                            	 														"Odontología",
+                                                                            	 														"Administración de empresas",
+                                                                            	 														"Enfermería",
+                                                                            	 														"Psicología" }))">
+																								 			<option value="">Elige una carrera</option>
+																								 		</select>
+																								 	</div>
+
+	<br />
+
+	<div>
+		<button class="btn btn-primary" type="submit">Guardar cambios</button>
+		<a href="/Materias/Lista" class="btn btn-secondary">Cancelar</a>
+	</div>
+
+</form>
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

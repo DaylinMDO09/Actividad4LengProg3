@@ -29,7 +29,7 @@ namespace Actividad4LengProg3.Controllers
                 TempData["Mensaje"] = "Estudiante registrado satisfactoriamente.";
                 return RedirectToAction("Lista");
             }   
-            return View(estudiante);
+            return View("Index", estudiante);
         }
 
 

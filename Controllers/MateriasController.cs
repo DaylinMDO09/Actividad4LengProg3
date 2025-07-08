@@ -26,15 +26,15 @@ namespace Actividad4LengProg3.Controllers
                 TempData["Mensaje"] = "Materia registrada satisfactoriamente.";
                 return RedirectToAction("Lista");
             }
-            return View(materia);
+            return View("Index", materia);
         }
-
+       
         public IActionResult Lista()
         {
             var materias = _context.Materias.ToList();
             return View(materias);
         }
-
+        [HttpGet]
         public IActionResult Editar(string codmateria)
         {
             var materias = _context.Materias.FirstOrDefault(m => m.codMateria == codmateria);
@@ -47,6 +47,7 @@ namespace Actividad4LengProg3.Controllers
 
             return View(materias);
         }
+        [HttpPost]
         public IActionResult Editar(MateriaViewModel materia)
         {
             if (ModelState.IsValid) {
@@ -75,7 +76,7 @@ namespace Actividad4LengProg3.Controllers
         public IActionResult Eliminar(string codmateria)
         {
             var materia = _context.Materias.FirstOrDefault(m => m.codMateria == codmateria);
-            if (materia == null)
+            if (materia != null)
             {
                 _context.Materias.Remove(materia);
                 _context.SaveChanges();
