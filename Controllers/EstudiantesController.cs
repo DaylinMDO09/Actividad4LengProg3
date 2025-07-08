@@ -11,7 +11,7 @@ namespace Actividad4LengProg3.Controllers
         public EstudiantesController(AppDbContext context)
         {
             _context = context;
-        }//Inyecta el contexto de base de datos para usarlo en todo el controlador.
+        }
 
         public IActionResult Index()
         {
@@ -44,13 +44,12 @@ namespace Actividad4LengProg3.Controllers
         [HttpGet]
         public IActionResult Editar(string matricula)
         {
-            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.Matricula == matricula);
+            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matriculaEstudiante == matricula);
             if (estudiante == null)
             {
                 TempData["Mensaje"] = "No existe el estudiante indicado";
                 return RedirectToAction("Lista");
             }
-
             return View(estudiante);
         }
 
@@ -61,28 +60,28 @@ namespace Actividad4LengProg3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var original = _context.Estudiantes.FirstOrDefault(e => e.Matricula == estudiante.Matricula);
+                var estudianteActual = _context.Estudiantes.FirstOrDefault(e => e.matriculaEstudiante == estudiante.matriculaEstudiante);
 
-                if (original == null)
+                if (estudianteActual == null)
                 {
                     TempData["Mensaje"] = "No existe el estudiante indicado";
                     return RedirectToAction("Lista");
                 }
 
-                // Actualizar campos
-                original.NombreCompleto = estudiante.NombreCompleto;
-                original.Carrera = estudiante.Carrera;
-                original.CorreoInstitucional = estudiante.CorreoInstitucional;
-                original.Telefono = estudiante.Telefono;
-                original.FechaNacimiento = estudiante.FechaNacimiento;
-                original.Genero = estudiante.Genero;
-                original.Turno = estudiante.Turno;
-                original.TipoIngreso = estudiante.TipoIngreso;
-                original.PorcentajeBeca = estudiante.PorcentajeBeca;
-                original.EstaBecado = estudiante.EstaBecado;
-                original.TerminosYCondiciones = estudiante.TerminosYCondiciones;
+                
+                estudianteActual.nombreEstudiante = estudiante.nombreEstudiante;
+                estudianteActual.carreraEstudiante = estudiante.carreraEstudiante;
+                estudianteActual.correoEstudiante = estudiante.correoEstudiante;
+                estudianteActual.telefonoEstudiante = estudiante.telefonoEstudiante;
+                estudianteActual.fechaEstudiante = estudiante.fechaEstudiante;
+                estudianteActual.generoEstudiante = estudiante.generoEstudiante;
+                estudianteActual.turnoEstudiante = estudiante.turnoEstudiante;
+                estudianteActual.ingresoEstudiante = estudiante.ingresoEstudiante;
+                estudianteActual.porcentajebecaEstudiante = estudiante.porcentajebecaEstudiante;
+                estudianteActual.becaEstudiante = estudiante.becaEstudiante;
+                estudianteActual.tcEstudiante = estudiante.tcEstudiante;
 
-                _context.Update(original);
+                _context.Update(estudianteActual);
                 _context.SaveChanges();    
 
                 TempData["Mensaje"] = "Los datos del estudiante han sido actualizados correctamente.";
@@ -96,10 +95,12 @@ namespace Actividad4LengProg3.Controllers
 
         public IActionResult Eliminar(string matricula)
         {
-            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.Matricula == matricula);
-            if (estudiante == null)
+            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.matriculaEstudiante == matricula);
+            if (estudiante != null) 
             {
-                TempData["Mensaje"] = "No existe el estudiante indicado";
+                _context.Estudiantes.Remove(estudiante);
+                _context.SaveChanges();
+                TempData["Mensaje"] = "Estudiante eliminado satisfactoriamente.";
                 return RedirectToAction("Lista");
             }
             return View(estudiante);

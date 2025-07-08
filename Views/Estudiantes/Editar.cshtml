@@ -57,31 +57,30 @@
         <div>
             <label class="form-label" asp-for="Turno"></label>
             <select class="form-select" asp-for="Turno" asp-items="@(new SelectList(
-                                                                                                     new[] { "Mañana",
-                                                                                                             "Tarde",
-                                                                                                             "Noche" }
-                                                                                                            ))">
-                <option value="">-- Seleccione turno --</option>
+                                                                        new[] { "Matutino",
+                                                                                "Vespertino",
+                                                                                "Nocturno" }))">
+                <option value="">Elegir un turno</option>
             </select>
-            <span asp-validation-for="Turno" class="text-danger"></span>
+            <span asp-validation-for="turnoEstudiante" class="text-danger"></span>
         </div>
 
 
         <div>
-            <label class="form-label" asp-for="TipoIngreso">Tipo de Ingreso</label>
-            <select class="form-select" asp-for="TipoIngreso" asp-items="@(new SelectList(
-                                                                                                                 new[] { "Nuevo Ingreso",
-                                                                                                                         "Reingreso",
-                                                                                                                         "Transferencia" }
-                                                                                                                        ))">
-                <option value="">-- Seleccione tipo de ingreso --</option>
+            <label class="form-label" asp-for="ingresoEstudiante">Tipo de Ingreso</label>
+            <select class="form-select" asp-for="ingresoEstudiante" asp-items="@(new SelectList(
+                                                                                         new[] { "Nuevo Ingreso",
+                                                                                                 "Reingreso",
+                                                                                                 "Ingreso por transferencia",
+                                                                                                 "Doctorado o Maestría" }))">
+                <option value="">Elige tu tipo de ingreso</option>
             </select>
-            <span asp-validation-for="TipoIngreso" class="text-danger"></span>
+            <span asp-validation-for="ingresoEstudiante" class="text-danger"></span>
         </div>
 
-        <div>
-            <label class="form-label">
-                <input type="checkbox" name="EstaBecado" value="true" @(Model.EstaBecado ? "checked" : "") /> ¿Está becado?
+        <div class="form-check">
+            <label asp-for="becaEstudiante" >
+                <input asp-for="becaEstudiante" class="form-check-input">
             </label>
         </div>
 

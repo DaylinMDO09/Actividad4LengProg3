@@ -4,65 +4,73 @@ namespace Actividad4LengProg3.Models
 {
     public class EstudianteViewModel
     {
-        [Required(ErrorMessage = "Debe ingresar su Nombre")]
-        [StringLength(100, ErrorMessage = "El nombre no puede tener más de 100 caracteres.")]
+        [Required(ErrorMessage = "El nombre del estudiante es necesario")]
+        [StringLength(100)]
         [Column("nombreEstudiante")]
-        public string NombreCompleto { get; set; }
+        [Display(Name = "Nombre completo")]
+        public string nombreEstudiante { get; set; }
 
         [Key]
         [Required(ErrorMessage = "Debe ingresar su Matricula")]
-        [StringLength(15, MinimumLength = 6, ErrorMessage = "La matrícula debe tener entre 6 y 15 caracteres.")]
+        [StringLength(15, MinimumLength = 6)]
         [Column("matriculaEstudiante")]
-        public string Matricula { get; set; }
+        [Display(Name = "Matricula")]
+        public string matriculaEstudiante { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar una carrera")]
+        [Required(ErrorMessage = "Debe elegir una carrera")]
         [Column("carreraEstudiante")]
-        public string Carrera { get; set; }
+        [Display(Name = "Carrera")]
+        public string carreraEstudiante { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar su Correo Institucional")]
-        [EmailAddress(ErrorMessage = "Debe ser un correo válido.")]
+        [Required(ErrorMessage = "El correo es obligatorio")]
+        [EmailAddress(ErrorMessage = "Correo inválido")]
         [Column("correoEstudiante")]
-        public string CorreoInstitucional { get; set; }
+        [Display(Name = "Correo institucional")]
+        public string correoEstudiante { get; set; }
 
-        [Phone(ErrorMessage = "Debe ingresar un número de teléfono válido.")]
-        [MinLength(10, ErrorMessage = "El teléfono debe tener al menos 10 dígitos.")]
+        [Phone(ErrorMessage = "El número telefónico es obligatorio")]
+        [MinLength(10)]
         [Column("telefonoEstudiante")]
-        public string Telefono { get; set; }
+        [Display(Name = "Número telefónico")]
+        public string telefonoEstudiante { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar su Fecha de Nacimiento")]
+        [Required(ErrorMessage = "Debe indicar su fecha de nacimiento")]
         [DataType(DataType.Date)]
         [Column("fechaEstudiante")]
-        public DateTime FechaNacimiento { get; set; }
+        [Display(Name = "Fecha de nacimiento")]
+        public DateTime? fechaEstudiante { get; set; }
 
 
-        [Required(ErrorMessage = "Debe seleccionar un género.")]
+        [Required]
         [Column("generoEstudiante")]
-        public string Genero { get; set; }
+        [Display(Name = "Género")]
+        public string generoEstudiante { get; set; }
 
 
-        [Required(ErrorMessage = "Debe seleccionar un turno.")]
+        [Required(ErrorMessage = "Debes elegir un turno.")]
         [Column("turnoEstudiante")]
-        public string Turno { get; set; }
+        [Display(Name = "Turnos")]
+        public string turnoEstudiante { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar el tipo de ingreso.")]
+        [Required(ErrorMessage = "Elige tu tipo de ingreso.")]
         [Column("ingresoEstudiante")]
-        public string TipoIngreso { get; set; }
+        [Display(Name = "Tipo de ingreso")]
+        public string ingresoEstudiante { get; set; }
 
 
         [Column("becaEstudiante")]
-        public bool EstaBecado { get; set; }
+        [Display(Name = "¿Eres becado?")]
+        public bool becaEstudiante { get; set; }
 
 
         [Range(0, 100, ErrorMessage = "El porcentaje debe estar entre 0 y 100.")]
         [Column("porcentajebecaEstudiante")]
-        public int? PorcentajeBeca { get; set; }
+        [Display(Name = "Porcentaje de la beca (en caso de tener beca): ")]        
+        public int? porcentajebecaEstudiante { get; set; }
 
-        //[Required(ErrorMessage = "Debe aceptar los términos y condiciones.")]
-        //[Range(typeof(bool), "true", "true")]
-        //public string TerminosYCondiciones { get; set; }
-
-        [Required(ErrorMessage = "Debe aceptar los términos y condiciones.")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Debes aceptar los términos y condiciones de la institución.")]
         [Column("tcEstudiante")]
-        public bool TerminosYCondiciones { get; set; }
+        [Display(Name = "Acepto los terminos y condiciones.")]
+        public bool tcEstudiante { get; set; }
     }
 }
