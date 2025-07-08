@@ -38,7 +38,7 @@ namespace Actividad4LengProg3.Models
         [DataType(DataType.Date)]
         [Column("fechaEstudiante")]
         [Display(Name = "Fecha de nacimiento")]
-        public DateTime? fechaEstudiante { get; set; }
+        public DateOnly fechaEstudiante { get; set; }
 
 
         [Required]

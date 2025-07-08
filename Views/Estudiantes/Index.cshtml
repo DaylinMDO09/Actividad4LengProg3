@@ -70,33 +70,33 @@
         </div>
 
         <div>
-            <label class="form-label" asp-for="TipoIngreso">Tipo de Ingreso</label>
-            <select class="form-select" asp-for="TipoIngreso" asp-items="@(new SelectList(
-                                                                                                                     new[] { "Nuevo Ingreso",
-                                                                                                                             "Reingreso",
-                                                                                                                             "Transferencia" }
-                                                                                                                             ))">
-                <option value="">-- Seleccione tipo de ingreso --</option>
+            <label asp-for="ingresoEstudiante"></label>
+		    <select asp-for="ingresoEstudiante" class="form-control" asp-items="@(new SelectList(
+                                                                             new[] { "Nuevo Ingreso",
+                                                                                     "Reingreso",
+                                                                                     "Ingreso por transferencia",
+                                                                                     "Doctorado o Maestría" }))">
+                <option value="">Elegir su tipo de ingreso</option>
             </select>
-            <span asp-validation-for="TipoIngreso" class="text-danger"></span>
+            <span asp-validation-for="ingresoEstudiante" class="text-danger"></span>
         </div>
 
         <div>
-            <label class="form-label" asp-for="EstaBecado">¿Esta Becado?</label>
-            <input class="form-check-input" asp-for="EstaBecado" type="checkbox" />
+            <label asp-for="becaEstudiante"></label>
+		    <input asp-for="becaEstudiante" class="form-check-input" type="checkbox" />
         </div>
 
         <div>
-            <label class="form-label" asp-for="PorcentajeBeca">Porcentaje de su Beca</label>
-            <input class="form-control" asp-for="PorcentajeBeca" type="number" min="0" max="100" />
-            <span asp-validation-for="PorcentajeBeca" class="text-danger"></span>
+            <label asp-for="porcentajebecaEstudiante"></label>
+		    <input asp-for="porcentajebecaEstudiante" class="form-control" />
+            <span asp-validation-for="porcentajebecaEstudiante" class="text-danger"></span>
         </div>
 
         <div class="form-check">
-            <input class="form-control" type="hidden" asp-for="TerminosYCondiciones" value="true" />
-            <input class="form-check-input" type="checkbox" asp-for="TerminosYCondiciones" value="true" />
-            <label class="form-check-label" asp-for="TerminosYCondiciones">Acepto los términos y condiciones</label>
-            <span asp-validation-for="TerminosYCondiciones" class="text-danger"></span>
+            <input class="form-control" type="hidden" asp-for="tcEstudiante" value="true" />
+            <input class="form-check-input" type="checkbox" asp-for="tcEstudiante" value="true" />
+            <label asp-for="tcEstudiante"></label>
+            <span asp-validation-for="tcEstudiante" class="text-danger"></span>
 
 
         </div>
@@ -106,7 +106,6 @@
         <div>
             <button class="btn btn-primary" type="submit">Registrar</button>
             <a href="/Estudiantes/Lista" class="btn btn-secondary">Lista de estudiantes registrados</a>
-
         </div>
     </form>
 

@@ -1,7 +1,7 @@
 ﻿@model  List<Actividad4LengProg3.Models.EstudianteViewModel>
 
 
-<h2>Estudiantes Registrados</h2>
+<h2>Listado de estudiantes registrados</h2>
 
 
 @if (TempData["Mensaje"] != null)
@@ -10,9 +10,9 @@
 }
 
 
-@if (Model != null && Model.Count > 0)
-{
-    <table class=" table table-primary table-hover table-bordered">
+<div class="row">
+    <div class="col-12">
+    <table class=" table table-hover">
         <thead>
             <tr>
                 <th>Nombre Completo</th>
@@ -20,40 +20,42 @@
                 <th>Carrera</th>
                 <th>Correo</th>
                 <th>Teléfono</th>
-                <th>Fecha Nac.</th>
+                <th>Fecha Nacimiento</th>
                 <th>Género</th>
                 <th>Turno</th>
                 <th>Tipo Ingreso</th>
                 <th>Beca</th>
-                <th>Porc. Beca</th>
-                <th>Acción</th>
+                <th>Porcentaje de la Beca</th>
+                <th>Terminos y condiciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var est in Model)
-            {
+            @{
+                foreach (var it in Model)
+                {
                 <tr>
-                    <td>@est.NombreCompleto</td>
-                    <td>@est.Matricula</td>
-                    <td>@est.Carrera</td>
-                    <td>@est.CorreoInstitucional</td>
-                    <td>@est.Telefono</td>
-                    <td>@est.FechaNacimiento.ToShortDateString()</td>
-                    <td>@est.Genero</td>
-                    <td>@est.Turno</td>
-                    <td>@est.TipoIngreso</td>
-                    <td>@(est.EstaBecado ? "Sí" : "No")</td>
-                    <td>@est.PorcentajeBeca %</td>
+                    <td>@it.nombreEstudiante</td>
+                    <td>@it.matriculaEstudiante</td>
+                    <td>@it.carreraEstudiante</td>
+                    <td>@it.correoEstudiante</td>
+                    <td>@it.telefonoEstudiante</td>
+                    <td>@it.fechaEstudiante.ToShortDateString()</td>
+                    <td>@it.generoEstudiante</td>
+                    <td>@it.turnoEstudiante</td>
+                    <td>@it.ingresoEstudiante</td>
+                    <td>@(it.becaEstudiante ? "Sí" : "No")</td>
+                    <td>@it.porcentajebecaEstudiante</td>
+                    <td>@it.tcEstudiante</td>
                     <td>
-                        <a class="btn btn-success m-2" href="/Estudiantes/Editar?matricula=@est.Matricula">Editar</a>
-                        <a class="btn btn-danger" href="/Estudiantes/Eliminar?matricula=@est.Matricula">Eliminar</a>
+                        <a asp-action="Editar" asp-route-matricula="@it.matriculaEstudiante" class="btn btn-secondary">Editar estudiante</a>
+                        <a asp-action="Eliminar" asp-route-matricula="@it.matriculaEstudiante" class="btn btn-danger">Eliminar estudiante</a>
                     </td>
                 </tr>
+                }
             }
         </tbody>
     </table>
-}
-else
-{
-    <p>No hay estudiantes registrados aún.</p>
-}
+</div>
+</div>
+
+
