@@ -62,8 +62,7 @@
               "RelativeToolTip": "Views\\Estudiantes\\Editar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-06T23:30:28.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T23:30:28.245Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-06T23:04:27.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T23:04:27.195Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Views\\Estudiantes\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-27T04:35:12.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T04:35:12.956Z"
             },
             {
               "$type": "Document",
@@ -97,9 +94,9 @@
               "Title": "EstudiantesController.cs",
               "DocumentMoniker": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\EstudiantesController.cs",
               "RelativeDocumentMoniker": "Controllers\\EstudiantesController.cs",
-              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\EstudiantesController.cs",
-              "RelativeToolTip": "Controllers\\EstudiantesController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA1wBsAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Daylin\\Desktop\\Documentos Importantes\\Tareas 2025\\LENGUAJE DE PROGRAMACION III\\Actividad4\\Actividad4LengProg3\\Controllers\\EstudiantesController.cs*",
+              "RelativeToolTip": "Controllers\\EstudiantesController.cs*",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAMwGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T01:56:03.011Z",
               "EditorCaption": ""
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Models\\EstudianteViewModel.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAYwDkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T03:42:03.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T03:42:03.87Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Views\\Estudiantes\\Lista.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T01:43:04.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T01:43:04.932Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T16:43:00.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T16:43:00.657Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "Models\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T23:08:03.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T23:08:03.092Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-06T11:39:48.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T11:39:48.906Z"
             }
           ]
         },
