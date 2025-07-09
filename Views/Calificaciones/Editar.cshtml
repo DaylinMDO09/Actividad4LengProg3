@@ -1,0 +1,48 @@
+﻿@model CalificacionViewModel;
+
+<h1>Editar calificacion de un estudiante calificado</h1>
+
+@if (TempData["Mensaje"] != null)
+{
+	<div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<form asp-action="Editar" asp-controller="Calificaciones" method="post">
+	<div>
+		<label asp-for="matriculaEstudiante"></label>
+		<select asp-for="matriculaEstudiante" class="form-control" asp-items="ViewBag.Estudiantes" />
+		<span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
+	</div>
+	<div>
+		<label asp-for="codMateria"></label>
+		<select asp-for="codMateria" class="form-control" asp-items="ViewBag.Materias" />
+		<span asp-validation-for="codMateria" class="text-danger"></span>
+	</div>
+	<div>
+		<label asp-for="notaEstudiante"></label>
+		<input asp-for="notaEstudiante" class="form-control" />
+		<span asp-validation-for="notaEstudiante" class="text-danger"></span>
+	</div>
+	<div>
+		<label asp-for="periodoEstudiante"></label>
+		<select asp-for="periodoEstudiante" class="form-control" asp-items="@(new SelectList(
+																				new[] {"1-2025",
+																					   "2-2025",
+																					   "3-2025"}))">
+			<option value="">Elige el periodo</option>
+		</select>
+		<span asp-validation-for="periodoEstudiante" class="text-danger"></span>
+																								  	</div>
+
+	< /br>
+
+	<div>
+		<button class="btn btn-primary" type="submit">Guardar cambios</button>
+		<a hfref="/Calificaciones/Lista" class="btn btn-danger">Cancelar</a>
+	</div>
+
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}
