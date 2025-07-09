@@ -1,5 +1,43 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model List<Actividad4LengProg3.Models.CalificacionViewModel>
+
+<h1>Listado de estudiantes calificados</h1>
+
+@if (TempData["Mensaje"] != null)
+{
+	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
+
+<div class="row">
+	<div class="col-12">
+		<table class=" table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Matricula de estudiante</th>
+					<th>Código de la materia</th>
+					<th>Nota</th>
+					<th>Periodo</th>
+				</tr>
+			</thead>
+			<tbody>
+				@{
+					foreach (var it in Model)
+					{
+						<tr>
+							<td>@it.idCalificacion</td>
+							<td>@it.matriculaEstudiante</td>
+							<td>@it.codMateria</td>
+							<td>@it.notaEstudiante</td>
+							<td>@it.periodoEstudiante</td>
+							<td>
+							<a asp-action="Editar" asp-route-idcalificacion="@it.idCalificacion" class="btn btn-secondary">Editar calificacion de este estudiante</a>
+							<a asp-action="Eliminar" asp-route-idcalificacion="@it.idCalificacion" class="btn btn-danger">Eliminar calificacion de este estudiante</a>
+							</td>
+						</tr>
+					}
+					
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

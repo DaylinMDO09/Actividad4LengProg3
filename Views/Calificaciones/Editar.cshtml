@@ -7,16 +7,16 @@
 	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
+
 <form asp-action="Editar" asp-controller="Calificaciones" method="post">
+	<input type="hidden" asp-for="idCalificacion" />
 	<div>
-		<label asp-for="matriculaEstudiante"></label>
-		<select asp-for="matriculaEstudiante" class="form-control" asp-items="ViewBag.Estudiantes" />
-		<span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
+		<label asp-for="matriculaEstudiante"></label>		
+		<input asp-for="matriculaEstudiante" class="form-control" readonly />
 	</div>
 	<div>
 		<label asp-for="codMateria"></label>
-		<select asp-for="codMateria" class="form-control" asp-items="ViewBag.Materias" />
-		<span asp-validation-for="codMateria" class="text-danger"></span>
+		<input asp-for="codMateria" class="form-control" readonly />
 	</div>
 	<div>
 		<label asp-for="notaEstudiante"></label>
@@ -25,20 +25,14 @@
 	</div>
 	<div>
 		<label asp-for="periodoEstudiante"></label>
-		<select asp-for="periodoEstudiante" class="form-control" asp-items="@(new SelectList(
-																				new[] {"1-2025",
-																					   "2-2025",
-																					   "3-2025"}))">
-			<option value="">Elige el periodo</option>
-		</select>
-		<span asp-validation-for="periodoEstudiante" class="text-danger"></span>
-																								  	</div>
+		<input asp-for="periodoEstudiante" class="form-control" readonly />
+	</div>
 
-	< /br>
+	<br />
 
 	<div>
 		<button class="btn btn-primary" type="submit">Guardar cambios</button>
-		<a hfref="/Calificaciones/Lista" class="btn btn-danger">Cancelar</a>
+		<a href="/Calificaciones/Lista" class="btn btn-danger">Cancelar</a>
 	</div>
 
 </form>

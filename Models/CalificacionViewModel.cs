@@ -7,7 +7,7 @@ namespace Actividad4LengProg3.Models
     {
         [Key]
         [Column("IDCALIFICACION")]
-        public int idCalificacion { get; set; }
+        public int? idCalificacion { get; set; }
 
         [Required(ErrorMessage = "Debe indicar la matricula para calificar al estudiante.")]
         [Column("MATRICULAESTUDIANTE")]
@@ -29,5 +29,11 @@ namespace Actividad4LengProg3.Models
         [Column("PERIODO")]
         [Display(Name = "Periodo")]
         public string periodoEstudiante { get; set; }
+
+        //[ForeignKey("matriuclaEstudiante")]
+        //public virtual EstudianteViewModel? Estudiantes { get; set; }
+
+        //[ForeignKey("CODIGOMATERIA")]
+        //public virtual MateriaViewModel? Materia { get; set; }
     }
 }

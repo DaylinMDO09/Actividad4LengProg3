@@ -7,15 +7,20 @@
 	<div class="alert alert-success">@TempData["Mensaje"]</div>
 }
 
+
 <form asp-action="Calificar" asp-controller="Calificaciones" method="post">
 	<div>
 		<label asp-for="matriculaEstudiante"></label>
-		<select asp-for="matriculaEstudiante" class="form-control" asp-items="ViewBag.Estudiantes" />
+		<select asp-for="matriculaEstudiante" class="form-control" asp-items="ViewBag.Estudiantes">
+			<option value="">Elige un estudiante</option>
+	</select>
 		<span asp-validation-for="matriculaEstudiante" class="text-danger"></span>
 	</div>
 	<div>
 		<label asp-for="codMateria"></label>
-		<select asp-for="codMateria" class="form-control" asp-items="ViewBag.Materias" />
+		<select asp-for="codMateria" class="form-control" asp-items="ViewBag.Materias">
+			<option value="">Elige una materia</option>
+		</select>
 		<span asp-validation-for="codMateria" class="text-danger"></span>
 	</div>
 	<div>
@@ -34,11 +39,11 @@
 		<span asp-validation-for="periodoEstudiante" class="text-danger"></span>
 	</div>
 
-	< /br>
+	<br />
 
 	<div>
 		<button class="btn btn-primary" type="submit">Calificar estudiante</button>
-		<a hfref="/Calificaciones/Lista" class="btn btn-secondary">Lista de estudiantes calificados</a>
+		<a href="/Calificaciones/Lista" class="btn btn-secondary">Lista de estudiantes calificados</a>
 	</div>
 
 </form>

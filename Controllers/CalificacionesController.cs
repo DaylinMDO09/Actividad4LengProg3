@@ -15,17 +15,22 @@ namespace Actividad4LengProg3.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
+            ViewBag.Estudiantes = _context.Estudiantes
+            .Select(e => new SelectListItem
+            {
+                Value = e.matriculaEstudiante,
+                Text = e.matriculaEstudiante + " - " + e.nombreEstudiante + " - " + e.carreraEstudiante
+            }).ToList();
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            ViewBag.Estudiantes = new SelectList(_context.Estudiantes, "matriculaEstudiante");
-            ViewBag.Materias = new SelectList(_context.Materias, "CODIGOMATERIA");
-            return View();
-        }
+            ViewBag.Materias = _context.Materias
+            .Select(m => new SelectListItem
+            {
+                Value = m.codMateria,
+                Text = m.codMateria + " - " + m.nombreMateria
+            }).ToList();
 
+            return View(new CalificacionViewModel());
+        }
 
 
         [HttpPost]
@@ -44,7 +49,7 @@ namespace Actividad4LengProg3.Controllers
         public IActionResult Lista()
         {
             var calificacion = _context.Calificaciones.ToList();
-            return View();
+            return View(calificacion);
         }
 
         [HttpGet]
@@ -62,33 +67,30 @@ namespace Actividad4LengProg3.Controllers
         [HttpPost]
         public IActionResult Editar(CalificacionViewModel calificacion)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                return View(calificacion);
+            }
                 var calificacionActual = _context.Calificaciones.FirstOrDefault(c => c.idCalificacion == calificacion.idCalificacion);
                 if (calificacionActual == null)
                 {
                     TempData["Mensaje"] = "No existe la calificación indicada.";
                     return RedirectToAction("Lista");
-                }
-
-                calificacionActual.matriculaEstudiante = calificacion.matriculaEstudiante;
-                calificacionActual.codMateria = calificacion.codMateria;
+                }               
+                
                 calificacionActual.notaEstudiante = calificacion.notaEstudiante;
-                calificacionActual.periodoEstudiante = calificacion.periodoEstudiante;
-
+                
                 _context.Update(calificacionActual);
                 _context.SaveChanges();
 
                 TempData["Mensaje"] = "La nota ha sido cambiada correctamente.";
-                return RedirectToAction("Lista");
-            }
-            return View(calificacion);
+                return RedirectToAction("Lista");            
         }
 
-        public IActionResult Eliminar(string idcalificacion)
+        public IActionResult Eliminar(int idcalificacion)
         {
-            var calificacion = _context.Calificaciones.FirstOrDefault(c => c.idCalificacion.ToString() == idcalificacion);
-            if (calificacion == null)
+            var calificacion = _context.Calificaciones.FirstOrDefault(c => c.idCalificacion == idcalificacion);
+            if (calificacion != null)
             {
                 _context.Calificaciones.Remove(calificacion);
                 _context.SaveChanges();
