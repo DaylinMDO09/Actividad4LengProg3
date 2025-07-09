@@ -75,8 +75,7 @@
               "RelativeToolTip": "Controllers\\EstudiantesController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T04:43:49.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T04:43:49.674Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Views\\Materias\\Lista.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T04:05:13.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T04:05:13.453Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Views\\Materias\\Editar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T04:02:33.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T04:02:33.658Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Views\\Materias\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T03:19:28.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T03:19:28.933Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Models\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T02:57:15.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T02:57:15.352Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "Models\\MateriaViewModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T02:44:11.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T02:44:11.731Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAACFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-06T11:39:48.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-06T11:39:48.906Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "Controllers\\MateriasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIAwwFUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T02:41:19.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T02:41:19.653Z"
             }
           ]
         },
